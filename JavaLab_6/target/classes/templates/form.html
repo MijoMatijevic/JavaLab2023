@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form th:action="@{/addDevice}" th:object="${record}" method="post">
+
+  <label>ID:</label>
+  <input type="text" th:field="*{flag}"/>
+  <br/>
+
+  <label>Month of Measurement:</label>
+  <input type="text" th:field="*{month}"/>
+  <br/>
+
+  <label>Year of Measurement:</label>
+  <input type="text" th:field="*{year}"/>
+  <br>
+
+  <label>Value of Measurement</label>
+  <input type="text" th:field="*{value}"/>
+  <br><br>
+
+  <button type="submit" > Save Device</button>
+</form>
+
+
+</body>
+</html>
